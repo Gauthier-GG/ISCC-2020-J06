@@ -2,7 +2,6 @@
 //Compteur dizaine, centaine//
 function compter_dizaine($maximum)
 {
-    $compteur=0;
     while ($compteur<=$maximum){
         $compteur = $compteur + 1;
 
