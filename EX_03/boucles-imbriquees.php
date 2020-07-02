@@ -1,16 +1,12 @@
 <?php
 function clock(){
-    for($minute=0;$minute<=59; $minute=$minute + 1){
-        if ($minute>59){
-            $heure + 1;
+    for ($heures = 0; $heures < 24; $heures++){
+        for ($minutes = 0; $minutes < 60; $minutes = $minutes + 1){
+            echo (($heures > 9) ? ("$heures") : ("0$heures")) . " : " . (($minutes > 9) ? ("$minutes") : ("0$minutes"));
+            echo '<br>';
         }
-    }
-    for($heure=0;$heure<=23;){
-        if ($heure>23){
-        break;
-        }
+        echo '<br>';
     }
 }
-//Rendu//
 clock();
 ?>

@@ -3,18 +3,9 @@
 function compter_dizaine($maximum)
 {
     while ($compteur<=$maximum){
-        $compteur = $compteur + 1;
+        echo (($compteur=$compteur+1) ? ("<p>Compteur : $compteur</p>") : null); 
 
-        echo "<p>Compteur : $compteur</p>";
-
-    if (!($compteur%100))
-    {
-        echo 'Ceci est une centaine';
-    }
-    elseif (!($compteur%10))
-    {
-        echo 'Ceci est une dizaine';
-    }
+        echo ((!($compteur%100)) ? ('Ceci est une centaine') : null). "" . ((!($compteur%10)) ? ('Ceci est une dizaine') : null);
     }
     return;
 }
